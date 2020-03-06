@@ -23,12 +23,15 @@ pipeline{
 				}
 			}
 		}
-
+		stage('Set Version'){
+			steps{ 			
+				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -f pom.xml"    				
+			}
+		}
 		stage('Munit Test'){
 			steps{
 				bat "mvn clean test"
-			}
-				
+			}		
 		}
 	}
 }
