@@ -24,8 +24,13 @@ pipeline{
 			}
 		}
 		stage('Set Version'){
-			steps{ 			
-				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -f pom.xml"    				
+			steps{ 		
+				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'configFile')]) {
+					def props = readProperties file: "$configFile"
+					def groupId = props['anypoint.organizationId']
+    				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -DgroupId=groupId -f pom.xml"  
+				}	
+				  				
 			}
 		}
 		stage('Munit Test'){

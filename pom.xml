@@ -143,7 +143,7 @@
 		<repository>
 			<id>ExchangeRepository</id>
 			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/30ebf368-e75b-48ae-b8af-2bc1a01754a7/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/${project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
