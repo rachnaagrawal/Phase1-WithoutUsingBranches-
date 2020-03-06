@@ -25,7 +25,7 @@ pipeline{
 		}
 		stage('Set Version'){
 			steps{ 		
-    				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -DgroupId=30ebf368-e75b-48ae-b8af-2bc1a01754a7 -f pom.xml"  
+    				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -f pom.xml"  
 				  				
 			}
 		}
