@@ -24,8 +24,12 @@ pipeline{
 			}
 		}
 		stage('Set Version'){
-			steps{ 				
-    				echo "$dfvdf"
+			steps{ 			
+				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'dfvdf')]) {
+					echo "$dfvdf"
+    				// some block
+				}	
+    				
 			}
 		}
 	}
