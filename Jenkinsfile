@@ -30,7 +30,7 @@ pipeline{
 		}
 		stage('Munit Test'){
 			steps{
-				bat "mvn clean test"
+				bat "mvn clean install"
 			}		
 		}
 	}
