@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage('BootStrap with TargetConfiguration'){
 			steps{
-				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "D:\\CloneDIR\\version_$BUILD_ID", variable: 'dfvdf')]) {
+				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'dfvdf')]) {
     				// some block
     				
     				echo "$dfvdf"
