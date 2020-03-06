@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>30ebf368-e75b-48ae-b8af-2bc1a01754a7</groupId>
 	<artifactId>dummyproject</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>mule-application</packaging>
 
 	<name>dummyproject</name>
@@ -12,10 +12,13 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+		
 		<app.runtime>4.1.4</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	<munit.version>2.2.1</munit.version>
+
+	
+	
     </properties>
 
 	<build>
@@ -26,6 +29,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<classifier>mule-application-example</classifier>
 				</configuration>
 			</plugin>
 		<plugin>
@@ -107,5 +111,16 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+    
+
+
+	<distributionManagement>
+        <repository>
+            <id>ExchangeRepository</id>
+            <name>Corporate Repository</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/30ebf368-e75b-48ae-b8af-2bc1a01754a7/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 
 </project>
