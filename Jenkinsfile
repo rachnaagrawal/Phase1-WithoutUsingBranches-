@@ -26,6 +26,7 @@ pipeline{
 		stage('Set Version'){
 			steps{ 			
 				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'dfvdf')]) {
+					bat "echo &echo.anypoint.version=1.0.${BUILD_ID} >> dev-sys.properties"
 					echo "$dfvdf"
     				// some block
 				}	
