@@ -1,3 +1,4 @@
+
 pipeline{
 	agent any
 	stages{
@@ -19,6 +20,7 @@ pipeline{
 			steps{
 				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "D:\\CloneDIR\\version_$BUILD_ID", variable: 'dfvdf')]) {
     				// some block
+    				properties([[$class: 'EnvInjectJobProperty', info: [loadFilesFromMaster: false, propertiesFilePath: "$dfvdf", secureGroovyScript: [classpath: [], sandbox: false, script: '']], keepBuildVariables: true, keepJenkinsSystemVariables: true, on: true]])
     				echo "$dfvdf"
 				}
 			}
