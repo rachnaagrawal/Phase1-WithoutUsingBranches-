@@ -25,9 +25,7 @@ pipeline{
 		}
 		stage('Set Version'){
 			steps{ 		
-				configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'configFile')]) {
     				bat "mvn versions:set -DnewVersion=1.0.${BUILD_ID} -DgroupId=30ebf368-e75b-48ae-b8af-2bc1a01754a7 -f pom.xml"  
-				}	
 				  				
 			}
 		}
