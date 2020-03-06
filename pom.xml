@@ -5,7 +5,7 @@
 
 	<groupId>30ebf368-e75b-48ae-b8af-2bc1a01754a7</groupId>
 	<artifactId>dummyproject</artifactId>
-	<version>${anypoint.version}</version>
+	<version>${aversion}</version>
 	<packaging>mule-application</packaging>
 
 	<name>dummyproject</name>
