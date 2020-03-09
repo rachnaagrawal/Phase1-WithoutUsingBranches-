@@ -1,4 +1,4 @@
-pipeline{
+node{
 	agent any
 	stages{
 		stage('STEP 3'){
@@ -33,6 +33,14 @@ pipeline{
 				bat "mvn clean test"
 			}		
 		}
+		 stage('build'){
+           
+            bat 'del temp.txt'
+            bat 'curl -d "username=bharatbhalla&password=Boardsarecoming@1" https://anypoint.mulesoft.com/accounts/login >> temp.txt '
+            def ref=readJSON file: 'temp.txt'
+            echo "hello"
+            echo "${ref}"
+        }
 
 	}
 }
