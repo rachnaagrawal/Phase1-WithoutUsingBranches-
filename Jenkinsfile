@@ -1,5 +1,4 @@
 node{
-	agent any
 	stages{
 		stage('STEP 3'){
 			steps{
