@@ -37,7 +37,7 @@ node{
             bat 'curl -d "username=bharatbhalla&password=Boardsarecoming@1" https://anypoint.mulesoft.com/accounts/login >> temp.txt '
             def ref=readJSON file: 'temp.txt'
             echo "hello"
-            echo "${ref}"
+            echo "${ref.access_token}"
         }
 
 	
