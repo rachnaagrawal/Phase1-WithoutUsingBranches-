@@ -1,4 +1,3 @@
-properties([[$class: 'EnvInjectJobProperty', info: [loadFilesFromMaster: false, propertiesFilePath: "${env.WORKSPACE}\\dev-sys.properties", secureGroovyScript: [classpath: [], sandbox: false, script: '']], keepBuildVariables: true, keepJenkinsSystemVariables: true, on: true]])
 pipeline{
 	agent any
 	stages{
