@@ -1,5 +1,4 @@
 node{
-	stages{
 		stage('STEP 3'){
 			steps{
 				echo "${WORKSPACE}"
@@ -41,5 +40,5 @@ node{
             echo "${ref}"
         }
 
-	}
+	
 }
