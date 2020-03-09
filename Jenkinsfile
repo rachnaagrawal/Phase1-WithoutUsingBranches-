@@ -8,7 +8,7 @@ node{
 		stage('Clone'){
 			
 			dir("D:\\CloneDIR\\version_$BUILD_ID") {
-    			git branch: 'master', credentialsId: '3d5cdb37-6e90-465b-9b1d-527ae99e152d', url: 'https://github.com/Ritik180/Phase1-WithoutUsingBranches-.git'
+    			git branch: 'master', credentialsId: '3d5cdb37-6e90-465b-9b1d-527ae99e152d', url: 'https://github.com/bharatbhallaCoder/Phase1-WithoutUsingBranches-.git'
 				}
 				echo "$BUILD_ID"
 			
