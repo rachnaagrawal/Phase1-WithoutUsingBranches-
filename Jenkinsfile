@@ -1,8 +1,15 @@
 pipeline{
     agent any
     stages{
-        stage('STEP 3'){
+        stage('Checkout'){
             steps{
+                 checkout([$class: 'GitSCM',
+          branches: [[name: "${env.branch}"]],
+    doGenerateSubmoduleConfigurations: false,
+    extensions: [[$class: 'CleanCheckout']],
+    submoduleCfg: [],
+    userRemoteConfigs: [[credentialsId: 'gitlogin', url: 'https://github.com/bharatbhallaCoder/Phase1-WithoutUsingBranches-.git']]
+])
                 echo "${WORKSPACE}"
                
             }
@@ -10,7 +17,7 @@ pipeline{
         stage('Clone'){
             steps{
             dir("D:\\CloneDIR\\version_$BUILD_ID") {
-                git branch: 'master', credentialsId: 'gitlogin', url: 'https://github.com/bharatbhallaCoder/Phase1-WithoutUsingBranches-.git'
+                git branch: "${env.branch}", credentialsId: 'gitlogin', url: 'https://github.com/bharatbhallaCoder/Phase1-WithoutUsingBranches-.git'
 				}
                 echo "$BUILD_ID"
             }
@@ -34,7 +41,7 @@ pipeline{
                 bat "mvn clean test"
             }       
         }
-		stage('build'){
+        stage('build'){
 			steps{
 			bat 'del temp.txt'
             bat 'curl -d "username=bharatbhalla&password=Boardsarecoming@1" https://anypoint.mulesoft.com/accounts/login >> temp.txt '
@@ -48,6 +55,7 @@ pipeline{
 			}
  
         }
+
 		
 
 	}
