@@ -1,4 +1,6 @@
-node{
+pipeline{
+	agent any
+	stages{
 		stage('STEP 3'){
 			
 				echo "${WORKSPACE}"
@@ -41,5 +43,6 @@ node{
 			bat "mvn deploy -Dpassword=${ref.access_token} -DrepositoryId=ExchangeRepository "  
         }
 
-	
+	}
 }
+
