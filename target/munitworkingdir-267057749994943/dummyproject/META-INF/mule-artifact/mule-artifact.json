@@ -1,0 +1,26 @@
+{
+  "configs": [
+    "dummyproject.xml",
+    "dummyproject-test-suite.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "c4744f6e-f59b-4443-870f-10f9edea128f:dummyproject:1.2.3",
+  "minMuleVersion": "4.2.1",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedResources": [
+        "log4j2.xml",
+        "log4j2-test.xml"
+      ],
+      "includeTestDependencies": "true",
+      "exportedPackages": []
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

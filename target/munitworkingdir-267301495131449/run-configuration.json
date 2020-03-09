@@ -1,0 +1,60 @@
+{
+  "runToken": "8abb72df-1565-4eea-8811-134d022591a3",
+  "projectName": "dummyproject",
+  "domainLocation": "",
+  "tags": [],
+  "testNames": [],
+  "suitePaths": [
+    "dummyproject-test-suite.xml"
+  ],
+  "allSuitePaths": [
+    "dummyproject-test-suite.xml"
+  ],
+  "skipAfterFailure": false,
+  "notifierConfigurations": [
+    {
+      "clazz": "org.mule.munit.remote.notifiers.ConsoleNotifier",
+      "parameters": [
+        {
+          "name": "runToken",
+          "type": "java.lang.String",
+          "value": "8abb72df-1565-4eea-8811-134d022591a3"
+        }
+      ]
+    }
+  ],
+  "coverageConfiguration": {
+    "runCoverage": false,
+    "randomizeCoveragePort": true,
+    "suitePaths": [
+      "dummyproject-test-suite.xml"
+    ],
+    "ignoredFiles": [],
+    "ignoredFlowNames": []
+  },
+  "containerConfiguration": {
+    "runtimeId": "4.2.1",
+    "product": "MULE",
+    "munitWorkingDirectoryPath": "C:\\Users\\bhbhalla\\Documents\\Repo\\Phase1-WithoutUsingBranches-\\target\\munitworkingdir-267301495131449",
+    "log4JConfigurationFilePath": "C:\\Users\\bhbhalla\\Documents\\Repo\\Phase1-WithoutUsingBranches-\\target\\test-classes\\log4j2-test.xml",
+    "mavenConfiguration": {
+      "settingsXmlFilePath": "C:\\Users\\bhbhalla\\.m2\\settings.xml",
+      "globalSettingsXmlFilePath": "C:\\Program Files\\apache-maven-3.6.3\\bin\\..\\conf\\settings.xml",
+      "mavenRepositoryDirectoryPath": "C:\\Users\\bhbhalla\\.m2\\repository",
+      "offlineMode": false,
+      "forcePolicyUpdate": true,
+      "ignoreArtifactDescriptorRepositories": false,
+      "remoteRepositories": [
+        {
+          "id": "mulesoft-releases",
+          "url": "https://repository.mulesoft.org/releases/"
+        },
+        {
+          "id": "central",
+          "url": "https://repo.maven.apache.org/maven2"
+        }
+      ]
+    },
+    "serverPluginConfigurations": []
+  }
+}
