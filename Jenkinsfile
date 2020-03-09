@@ -37,10 +37,13 @@ pipeline{
 			steps{
 			bat 'del temp.txt'
             bat 'curl -d "username=bharatbhalla&password=Boardsarecoming@1" https://anypoint.mulesoft.com/accounts/login >> temp.txt '
-            def ref=readJSON file: 'temp.txt'
-            echo "hello"
+            script{
+				def ref=readJSON file: 'temp.txt'
+           	 echo "hello"
             echo "${ref.access_token}"
 			bat "mvn deploy -Dpassword=${ref.access_token} -DrepositoryId=ExchangeRepository " 
+			}
+			
 			}
  
         }
