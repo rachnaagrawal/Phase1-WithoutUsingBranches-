@@ -15,8 +15,8 @@ pipeline{
                 echo "$BUILD_ID"
             }
         }
-		ws("D:\\CloneDIR\\version_$BUILD_ID"){
-			        stage('BootStrap with TargetConfiguration'){
+		
+		stage('BootStrap with TargetConfiguration'){
             steps{
                 configFileProvider([configFile(fileId: 'dev-sys', targetLocation: "${WORKSPACE}", variable: 'dfvdf')]) {
                     // some block
@@ -48,7 +48,7 @@ pipeline{
 			}
  
         }
-		}
+		
 
 	}
        
