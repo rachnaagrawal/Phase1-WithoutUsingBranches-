@@ -38,7 +38,7 @@ node{
             def ref=readJSON file: 'temp.txt'
             echo "hello"
             echo "${ref.access_token}"
-			bat 'mvn deploy -Dusername=~~~Token~~~ -Dpassword="${ref.access_token}" -DrepositoryId=ExchangeRepository  '  
+			bat 'mvn deploy -Dusername=~~~Token~~~ -Dpassword="${ref.access_token}" -DrepositoryId=ExchangeRepository  -Dauthtype=oauth'  
         }
 
 	
