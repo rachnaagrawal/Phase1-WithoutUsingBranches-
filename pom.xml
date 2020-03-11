@@ -31,8 +31,37 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application-example</classifier>
+					<cloudHubDeployment>
+					<muleVersion>${app.runtime}</muleVersion>
+					<username>${username1}</username>
+					<password>${password1}</password>
+					<applicationName>${applicationName1}</applicationName>
+					<environment>${environment1}</environment>
+					<!-- <muleVersion>4.2.1</muleVersion>
+					<username>bharatbhalla365</username>
+					<password>Boardsarecoming@1</password>
+					<applicationName>MuleProjectCICD365</applicationName>
+					<environment>Sandbox</environment> -->
+					<workerType>Micro</workerType>
+            		<workers>1</workers>
+					<properties>
+						<SelectedENV>${sEnv}</SelectedENV>
+						<username2>${username1}</username2>
+						<password3>${password1}</password3>
+						<applicationName4>${applicationName1}</applicationName4>
+						<environment5>${environment1}</environment5>
+					</properties>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
+
+
+
+
+
+
+
+
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
