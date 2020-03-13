@@ -44,7 +44,7 @@
 					<environment>Sandbox</environment> -->
 					<workerType>Micro</workerType>
             				<workers>1</workers>
-					<region>us-west-2</region>
+					
 					<properties>
 						<SelectedENV>${sEnv}</SelectedENV>
 						<username2>${username1}</username2>
