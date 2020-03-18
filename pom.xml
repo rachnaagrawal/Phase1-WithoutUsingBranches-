@@ -37,11 +37,6 @@
 					<password>${password1}</password>
 					<applicationName>${applicationName1}</applicationName>
 					<environment>${environment1}</environment>
-					<!-- <muleVersion>4.2.1</muleVersion>
-					<username>bharatbhalla365</username>
-					<password>Boardsarecoming@1</password>
-					<applicationName>MuleProjectCICD365</applicationName>
-					<environment>Sandbox</environment> -->
 					<workerType>Micro</workerType>
             				<workers>1</workers>
 					
