@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>cca1d3a4-c4a9-4ba4-884b-af0fc0ae9cdf</groupId>
+	<groupId>6a64b31d-123d-49e3-b860-93af8a6a49b4</groupId>
 	<artifactId>dummyproject</artifactId>
 	<version>1.2.3</version>
 	<packaging>mule-application</packaging>
